@@ -1,8 +1,9 @@
-import React from "react";
 import axios from "axios";
+const env = process.env;
 
 const getRanking = async (id) => {
-    return axios.get(`http://localhost:8081/bcoint-challange-back/text/` + id + "/ranking")
+    let resourceURL = `${env.REACT_APP_API_URL}/${env.REACT_APP_API_RESOURCE_TEXT}/${ id + env.REACT_APP_API_RESOURCE_RANKING}`;
+    return axios.get(resourceURL)
         .then(res => {
             return {
                 id: res.data.id,
@@ -13,7 +14,8 @@ const getRanking = async (id) => {
 }
 
 const getText = async () => {
-    return axios.get(`http://localhost:8081/bcoint-challange-back/text`)
+    let resourceURL = `${env.REACT_APP_API_URL + env.REACT_APP_API_RESOURCE_TEXT}`;
+    return axios.get(resourceURL)
         .then(res => {
             return {
                 id: res.data.id,

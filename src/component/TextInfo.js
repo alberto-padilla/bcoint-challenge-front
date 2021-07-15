@@ -2,7 +2,6 @@ import React from "react";
 
 export const TextInfo = props => {
 
-
     return (
         <div className="container pt-3 pb-3">
             <div className="card shadow">

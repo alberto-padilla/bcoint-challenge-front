@@ -21,11 +21,11 @@ export const GenerateText = props => {
 
     return (
         <div className="pt-3 pb-3 container">
-            <row className="text-center">
+            <div className="text-center">
                 <form onSubmit={handleSubmit}>
                     <button type="submit" className="btn btn-primary">Generate Random Text</button>
                 </form>
-            </row>
+            </div>
             <TextInfo
                 text={text}
                 ranking={ranking}
